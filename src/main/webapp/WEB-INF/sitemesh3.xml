@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <decorator-prefix>/</decorator-prefix>
+
+    <!-- Bỏ qua tài nguyên tĩnh và các endpoint tải file -->
+    <mapping path="/assets/*" exclude="true" />
+    <mapping path="/image*" exclude="true" />
+    <mapping path="/uploads/*" exclude="true" />
+
+    <!-- Mapping giao diện Admin -->
+    <mapping path="/admin/*" decorator="/views/decorators/admin.jsp" />
+    <mapping path="/*" decorator="/views/decorators/main.jsp" />
+</sitemesh>
